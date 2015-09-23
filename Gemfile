@@ -26,6 +26,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Roo for parsing imported spreadsheets
 gem 'roo', '~> 2.1.0'
 
+# Use Mechanize for automated interaction with target sites
+gem 'mechanize'
+
+# Use Nokogiri to parse a target site's markup
+gem 'nokogiri'
+
+# Use Fibonaccia to access PHI
+gem 'fibonaccia'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
