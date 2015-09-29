@@ -35,6 +35,12 @@ gem 'nokogiri'
 # Use Fibonaccia to access PHI
 gem 'fibonaccia'
 
+# Use HTTParty for network requests
+gem 'httparty'
+
+# Use Figaro for ENV management
+gem 'figaro'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
