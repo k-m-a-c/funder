@@ -49,4 +49,12 @@ class Organization < ActiveRecord::Base
       puts "Error: An unknown issue occurred"
     end
   end
+
+  def calculate_funding
+    self.funding = transfer_payments.inject(0){|sum, payment|
+      next if payment.amount.nil?
+      sum += payment.amount
+    }
+    save!
+  end
 end

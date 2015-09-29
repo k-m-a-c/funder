@@ -41,6 +41,12 @@ gem 'httparty'
 # Use Figaro for ENV management
 gem 'figaro'
 
+# UI tools
+gem 'autoprefixer-rails'
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

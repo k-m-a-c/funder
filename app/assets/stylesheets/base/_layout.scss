@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+
+  main {
+    padding-top: 0.5rem;
+
+    div.container {
+      @include outer-container;
+      padding-top: 0.5rem;
+    }
+  }
+}

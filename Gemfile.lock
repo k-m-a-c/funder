@@ -37,10 +37,20 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.3)
+    autoprefixer-rails (6.0.2)
+      execjs
+      json
     bigdecimal (1.2.7)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bitters (1.1.0)
+      bourbon (>= 4.2)
+      sass (>= 3.4)
+      thor
     blockenspiel (0.4.5)
+    bourbon (4.2.4)
+      sass (~> 3.4)
+      thor (~> 0.19)
     builder (3.2.2)
     byebug (6.0.2)
     coderay (1.1.0)
@@ -97,6 +107,9 @@ GEM
     minitest (5.8.0)
     multi_json (1.11.2)
     multi_xml (0.5.5)
+    neat (1.7.2)
+      bourbon (>= 4.0)
+      sass (>= 3.3)
     net-http-digest_auth (1.4)
     net-http-persistent (2.9.4)
     nokogiri (1.6.6.2)
@@ -186,6 +199,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
+  bitters
+  bourbon
   byebug
   coffee-rails (~> 4.1.0)
   fibonaccia
@@ -194,6 +210,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   mechanize
+  neat
   nokogiri
   pg
   pry-rails
