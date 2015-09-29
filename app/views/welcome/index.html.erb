@@ -1,0 +1,8 @@
+<h1>Funder</h1>
+<p>Find out which organizations in your riding get funding from the
+Ontario Provincial Government</p>
+<%= form_tag do %>
+  <%= label_tag "Postal Code" %>
+  <%= text_field_tag :postal_code %>
+  <%= submit_tag "View Riding", :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+<% end %>

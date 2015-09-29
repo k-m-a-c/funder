@@ -3,6 +3,8 @@
 <head>
   <title>Funder</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'https://storage.googleapis.com/code.getmdl.io/1.0.4/material.blue-lightgreen.min.css' %>
+  <%= stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -10,5 +12,6 @@
 
 <%= yield %>
 
+  <%= javascript_include_tag 'https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js' %>
 </body>
 </html>
