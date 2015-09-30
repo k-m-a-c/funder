@@ -1,6 +1,6 @@
 class RidingsController < ApplicationController
   def index
-    @ridings = Riding.all.sort{|a,b| a.name <=> b.name}
+    @ridings = Riding.order("name").page(params[:page]).per(20)
   end
   def show
     @riding = Riding.find(params[:id])

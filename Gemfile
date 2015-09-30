@@ -41,6 +41,9 @@ gem 'httparty'
 # Use Figaro for ENV management
 gem 'figaro'
 
+# Use Kaminari for pagination
+gem 'kaminari'
+
 # UI tools
 gem 'autoprefixer-rails'
 gem 'bourbon'
