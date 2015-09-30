@@ -29,9 +29,9 @@
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Funder</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">My Riding</a>
-      <a class="mdl-navigation__link" href="">Ridings</a>
-      <a class="mdl-navigation__link" href="">Organizations</a>
+      <%= link_to "My Riding", ridings_path, class: "mdl-navigation__link" %>
+        <%= link_to "Ridings", ridings_path, class: "mdl-navigation__link" %>
+        <%= link_to "Organizations", organizations_path, class: "mdl-navigation__link" %>
     </nav>
   </div>
   <body>
