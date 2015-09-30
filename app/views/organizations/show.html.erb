@@ -1,0 +1,18 @@
+<% content_for :title, @organization.name %>
+<div class="card">
+  <div class="card-info-area">
+    <i class="material-icons">public</i>
+    <h6><%= @organization.name.downcase.split.map(&:capitalize).join(' ') %></h6>
+    <p>ORGANIZATION NAME</p>
+  </div>
+  <div class="card-info-area">
+    <i class="material-icons">local_atm</i>
+    <h6><%= number_to_currency(@organization.funding) %></h6>
+    <p>TOTAL ONTARIO GOVERNMENT FUNDING</p>
+  </div>
+  <div class="card-graph">
+    <!-- place donut graph here -->
+    <p>SOURCES OF FUNDING</p>
+  </div>
+  <%= render partial: "transfer_payments", locals: { payments: @organization.transfer_payments } %>
+</div>
