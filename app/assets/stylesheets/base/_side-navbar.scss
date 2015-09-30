@@ -1,0 +1,13 @@
+div.drawer-link {
+  &> i {
+    vertical-align: middle;
+  }
+
+  &> h6 {
+    font-size: rem(20px);
+    vertical-align: middle;
+    margin: 0 0 0 1.25rem;
+    display: inline-block;
+    line-height: 1;
+  }
+}

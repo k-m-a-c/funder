@@ -7,40 +7,57 @@
   <%= stylesheet_link_tag 'https://storage.googleapis.com/code.getmdl.io/1.0.4/material.red-blue.min.css' %>
   <%= stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js' %>
   <%= csrf_meta_tags %>
 </head>
 
-<!-- Always shows a header, even in smaller screens. -->
+<!-- The drawer is always open in large screens. The header is always shown,
+  even in small screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title"><%= yield :title %></span>
-      <!-- Add spacer, to align navigation to the right -->
+    <span class="mdl-layout-title">Funder</span>
       <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
         <%= link_to "My Riding", ridings_path, class: "mdl-navigation__link" %>
         <%= link_to "Ridings", ridings_path, class: "mdl-navigation__link" %>
         <%= link_to "Organizations", organizations_path, class: "mdl-navigation__link" %>
       </nav>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="fixed-header-drawer-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+                 id="fixed-header-drawer-exp" />
+        </div>
+      </div>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Funder</span>
     <nav class="mdl-navigation">
-      <%= link_to "My Riding", ridings_path, class: "mdl-navigation__link" %>
-        <%= link_to "Ridings", ridings_path, class: "mdl-navigation__link" %>
-        <%= link_to "Organizations", organizations_path, class: "mdl-navigation__link" %>
+      <%= link_to ridings_path, class: "mdl-navigation__link" do %>
+        <div class="drawer-link"><i class="material-icons">place</i><h6>My Riding</h6></div>
+      <% end %>
+      <%= link_to ridings_path, class: "mdl-navigation__link" do %>
+        <div class="drawer-link"><i class="material-icons">map</i><h6>Ridings</h6></div>
+      <% end %>
+      <%= link_to organizations_path, class: "mdl-navigation__link" do %>
+        <div class="drawer-link"><i class="material-icons">public</i><h6>Organizations</h6></div>
+      <% end %>
     </nav>
   </div>
+
   <body>
     <main class="mdl-layout__content">
       <div class="page-content">
         <%= yield %>
       </div>
     </main>
-    <%= javascript_include_tag 'https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js' %>
   </body>
+
 </div>
 </html>

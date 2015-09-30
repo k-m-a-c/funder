@@ -1,7 +1,7 @@
 <% content_for :title, "Ridings" %>
 <div class="container">
-  <div class="cards">
   <%= paginate @ridings %>
+  <div class="cards">
   <% @ridings.each do |riding| %>
     <div class="card">
       <div class="card-image">
