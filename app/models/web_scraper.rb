@@ -95,7 +95,6 @@ class WebScraper
       page = follow_link(link)
     else
       puts "Scrape complete."
-      break
     end
   end
 end
