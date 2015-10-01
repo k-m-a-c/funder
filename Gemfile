@@ -44,6 +44,9 @@ gem 'figaro'
 # Use Kaminari for pagination
 gem 'kaminari'
 
+# Graphing tools
+gem 'chartkick'
+
 # UI tools
 gem 'autoprefixer-rails'
 gem 'bourbon'

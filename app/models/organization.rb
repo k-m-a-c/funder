@@ -57,4 +57,14 @@ class Organization < ActiveRecord::Base
     }
     save!
   end
+
+  def funding_by_ministry
+    totals = transfer_payments.group(:ministry_id).sum('amount').map{|k,v|
+      {ministry_name: Ministry.find(k).name, total_funding: v.to_i}
+    }
+    totals.map{|hash|
+      hash[:ministry_name].gsub!(/\W$/, "")
+    }
+    totals
+  end
 end
