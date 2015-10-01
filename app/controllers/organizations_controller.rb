@@ -6,8 +6,6 @@ class OrganizationsController < ApplicationController
   def show
     @organization = Organization.find(params[:id])
     @payments = @organization.transfer_payments
-    @funding_data = @organization.funding_by_ministry.map{|hash|
-      [hash[:ministry_name], hash[:total_funding]]
-    }
+    @funding_data = @organization.funding_by_ministry
   end
 end

@@ -11,7 +11,7 @@
     <p>TOTAL ONTARIO GOVERNMENT FUNDING</p>
   </div>
   <div class="card-graph">
-    <%= pie_chart @funding_data %>
+    <%= render partial: "funding_graph", locals: { organization: @organization } %>
     <p>SOURCES OF FUNDING</p>
   </div>
   <%= render partial: "transfer_payments", locals: { payments: @organization.transfer_payments } %>
