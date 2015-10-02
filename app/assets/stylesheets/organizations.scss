@@ -34,7 +34,7 @@
 
     &> h6 {
       color: black;
-      font-size: 1.25rem;
+      font-size: 5.75vw;
       line-height: 2.0rem;
       vertical-align: middle;
       margin: 0 0 0 0.75rem;
@@ -57,6 +57,9 @@
     background-color: white;
     box-shadow: 0 0 1px #BBB;
     text-align: center;
+
+    &> canvas#fundingGraph {
+    }
 
     &> p {
       color: $medium-gray;
@@ -96,14 +99,14 @@
         margin-right: 2rem;
         display: inline-block;
         color: black;
-        font-size: 1.75rem;
+        font-size: 5.75vw;
         line-height: 2.0rem;
       }
 
       &> p {
         display: inline-block;
         color: $medium-gray;
-        font-size: 0.9rem;
+        font-size: 4vw;
         line-height: 1.25rem;
         max-width: 70%;
         margin-bottom: 0;

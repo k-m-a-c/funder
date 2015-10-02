@@ -3,6 +3,7 @@ body {
 
   main {
     padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 
     div.container {
       @include outer-container;
