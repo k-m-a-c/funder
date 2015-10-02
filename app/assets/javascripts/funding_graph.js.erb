@@ -1,31 +1,81 @@
-
 $(document).ready(function() {
-  var data = [
-    {
-      value: 300,
-      color:"#F7464A",
-      highlight: "#FF5A5E",
-      label: "Red"
-    },
-    {
-      value: 50,
-      color: "#46BFBD",
-      highlight: "#5AD3D1",
-      label: "Green"
-    },
-    {
-      value: 100,
-      color: "#FDB45C",
-      highlight: "#FFC870",
-      label: "Yellow"
-    }
-  ]
 
-  var options = {
-    responsive: true
+  var id = $("#fundingGraph").data().id;
+
+  $.getJSON(
+    "/organizations/" + id + "/funding_data",
+    function(json) {
+      console.log("getJSON callback:");
+      console.dir(json);
+      var data = assignGraphColors(json);
+      var options = {
+        responsive: false,
+        showTooltips: false
+      }
+      // Get context with jQuery - using jQuery's .get() method.
+      var ctx = $("#fundingGraph").get(0).getContext("2d");
+      // This will get the first returned node in the jQuery collection.
+      var fundingGraph = new Chart(ctx).Doughnut(data, options);
+    }
+  );
+
+  var assignGraphColors = function(data) {
+    var colors = [
+      {
+        color: "#FF5D5D",
+        highlight: "#FF8383"
+      },
+      {
+        color: "#52DF52",
+        highlight: "#78EB78"
+      },
+      {
+        color: "#5975CB",
+        highlight: "#7E96DE"
+      },
+      {
+        color: "#FFCC5D",
+        highlight: "#FFD883"
+      },
+      {
+        color: "#FFA75D",
+        highlight: "#FFBB83"
+      },
+      {
+        color: "#46BFBF",
+        highlight: "#6ED6D6"
+      },
+      {
+        color: "#FFE35D",
+        highlight: "#FFEA83"
+      },
+      {
+        color: "#755ACD",
+        highlight: "#967FDF"
+      },
+      {
+        color: "#E052A0",
+        highlight: "#EB79B7"
+      },
+      {
+        color: "#BFF459",
+        highlight: "#CEF875"
+      },
+      {
+        color: "#9551CA",
+        highlight: "#B977DD"
+      },
+      {
+        color: "#FFFD5D",
+        highlight: "#FFFD83"
+      }
+    ]
+
+    for(i=0; i<data.length; i++) {
+      data[i].color = colors[i].color;
+      data[i].highlight = colors[i].highlight;
+      data
+    }
+    return data;
   }
-  // Get context with jQuery - using jQuery's .get() method.
-  var ctx = $("#fundingGraph").get(0).getContext("2d");
-  // This will get the first returned node in the jQuery collection.
-  var fundingGraph = new Chart(ctx).Doughnut(data);
 });
