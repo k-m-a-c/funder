@@ -5,7 +5,9 @@
   <% @organizations.each do |org| %>
     <div class="card">
       <div class="card-header">
+      <%= link_to organization_path(org.id) do %>
         <%= org.name %>
+      <% end %>
       </div>
       <div class="card-copy">
         <p><strong>Funding:</strong> <%= number_to_currency(org.funding) %></p>
