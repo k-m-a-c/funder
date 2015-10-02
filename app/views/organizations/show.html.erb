@@ -13,6 +13,6 @@
   <div class="card-graph">
     <%= render partial: "funding_graph", locals: { organization: @organization } %>
     <p>SOURCES OF FUNDING</p>
+    <%= render partial: "transfer_payments", locals: { payments: @organization.funding_by_ministry } %>
   </div>
-  <%= render partial: "transfer_payments", locals: { payments: @organization.transfer_payments } %>
 </div>

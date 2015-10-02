@@ -2,7 +2,9 @@
 <% payments.each do |pay| %>
   <div class="card-transfer-payment">
     <div class="circle"></div>
-    <h6><%= number_to_currency(pay.amount) %></h6>
-    <p><%= pay.ministry %></p>
+    <div class="text-container">
+      <h6><%= number_to_currency(pay[:value]) %></h6>
+      <p><%= pay[:label] %></p>
+    </div>
   </div>
 <% end %>
