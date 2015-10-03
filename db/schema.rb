@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151003170655) do
+ActiveRecord::Schema.define(version: 20151003182950) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,7 +47,11 @@ ActiveRecord::Schema.define(version: 20151003170655) do
     t.float    "imported_longitude"
     t.integer  "funding",                  limit: 8
     t.string   "imported_postal_code"
+    t.string   "imported_riding_name"
+    t.integer  "riding_id"
   end
+
+  add_index "organizations", ["riding_id"], name: "index_organizations_on_riding_id", using: :btree
 
   create_table "ridings", force: :cascade do |t|
     t.string   "name"
@@ -70,6 +74,7 @@ ActiveRecord::Schema.define(version: 20151003170655) do
   add_index "transfer_payments", ["organization_id"], name: "index_transfer_payments_on_organization_id", using: :btree
 
   add_foreign_key "member_of_provincial_parliaments", "ridings"
+  add_foreign_key "organizations", "ridings"
   add_foreign_key "transfer_payments", "ministries"
   add_foreign_key "transfer_payments", "organizations"
 end
