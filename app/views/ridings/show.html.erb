@@ -1,0 +1,26 @@
+<% content_for :title, @riding.name %>
+<div class="container">
+
+  <div id="riding-shape-area">
+    <div id="left-arrow"><i class="material-icons">arrow_back</i></div>
+    <div id="shape"></div>
+    <div id="right-arrow"><i class="material-icons">arrow_forward</i></div>
+  </div>
+
+  <div id="riding-summary-card">
+    <div id="mpp-info"></div>
+    <div id="funding-info">
+      <i class="material-icons">local_atm</i>
+      <h6><%=# number_to_currency(@riding.total_funding) %></h6>
+      <p>TOTAL FUNDING FOR ORGANIZATIONS</p>
+      <i class="material-icons">navigate_next</i>
+    </div>
+    <div id="organizations-info">
+      <i class="material-icons">public</i>
+      <h6><%=# @riding.organizations.count %></h6>
+      <p>TOTAL NUMBER OF ORGANIZATIONS</p>
+      <i class="material-icons">navigate_next</i>
+    </div>
+  </div>
+
+</div>

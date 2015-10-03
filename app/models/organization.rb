@@ -58,6 +58,13 @@ class Organization < ActiveRecord::Base
     save!
   end
 
+  def find_postal_code
+    self.imported_postal_code = imported_mailing_address.slice(
+      /[A-Z]{1}\d{1}[A-Z]{1}\s{1}\d{1}[A-Z]{1}\d{1}/
+    )
+    save!
+  end
+
   def funding_by_ministry
     totals = transfer_payments.group(:ministry_id).sum('amount').map{|k,v|
       {

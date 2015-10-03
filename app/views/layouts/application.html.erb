@@ -12,8 +12,6 @@
   <%= csrf_meta_tags %>
 </head>
 
-<!-- The drawer is always open in large screens. The header is always shown,
-  even in small screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
@@ -37,7 +35,7 @@
       </div>
     </div>
   </header>
-  <div class="mdl-layout__drawer">
+  <header class="mdl-layout__drawer">
     <span class="mdl-layout-title">Funder</span>
     <nav class="mdl-navigation">
       <%= link_to ridings_path, class: "mdl-navigation__link" do %>
@@ -50,7 +48,7 @@
         <div class="drawer-link"><i class="material-icons">public</i><h6>Organizations</h6></div>
       <% end %>
     </nav>
-  </div>
+  </header>
 
   <body>
     <main class="mdl-layout__content">
