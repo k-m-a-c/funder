@@ -115,10 +115,10 @@
       margin: 0.325rem 0 0 0;
     }
 
-    &> i.navigate-right {
+    &> a, i.navigate-right {
       position: absolute;
       right: 0;
-      top: rem(25px);
+      top: 1rem;
     }
   }
 
@@ -151,10 +151,10 @@
       margin: 0.325rem 0 0 0;
     }
 
-    &> i.navigate-right {
+    &> a, i.navigate-right {
       position: absolute;
       right: 0;
-      top: rem(25px);
+      top: 1rem;
     }
   }
 }

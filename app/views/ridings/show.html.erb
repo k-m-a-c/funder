@@ -1,4 +1,4 @@
-<% content_for :title, @riding.name %>
+<% content_for :title, truncate(@riding.name, length: 22) %>
 <div class="container">
 
   <div id="riding-shape-area">

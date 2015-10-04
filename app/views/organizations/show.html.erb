@@ -1,4 +1,4 @@
-<% content_for :title, @organization.name %>
+<% content_for :title, truncate(@organization.name.downcase.split.map(&:capitalize).join(' '), length: 25) %>
 <div class="container">
   <div class="org-card">
     <div class="card-info-area">
