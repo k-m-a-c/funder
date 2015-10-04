@@ -1,0 +1,10 @@
+<!-- show amount and source ministry -->
+<% payments.each do |pay| %>
+  <div class="card-transfer-payment">
+    <div class="circle"></div>
+    <div class="text-container">
+      <h6><%= number_to_currency(pay[:value]) %></h6>
+      <p><%= pay[:label] %></p>
+    </div>
+  </div>
+<% end %>

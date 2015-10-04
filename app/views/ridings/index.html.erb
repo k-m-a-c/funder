@@ -5,7 +5,9 @@
   <% @ridings.each do |riding| %>
     <div class="card">
       <div class="card-image">
-        <%= image_tag riding.photo_url %>
+        <%= link_to riding_path(riding.id), data: {no_turbolink: true} do %>
+          <%= image_tag riding.photo_url %>
+        <% end %>
       </div>
       <div class="card-header">
         <%= riding.name %>

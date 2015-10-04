@@ -1,0 +1,20 @@
+<% content_for :title, "@riding.name > Organizations" %>
+<div class="container">
+  <% @organizations.each do |organization| %>
+    <div class="org-card">
+      <div class="card-info-area">
+        <i class="material-icons">public</i>
+        <h6><%= organization.name.downcase.split.map(&:capitalize).join(' ') %></h6>
+        <p>ORGANIZATION NAME</p>
+      </div>
+      <div class="card-info-area">
+        <i class="material-icons">local_atm</i>
+        <h6><%= number_to_currency(organization.funding) %></h6>
+        <p>TOTAL ONTARIO GOVERNMENT FUNDING</p>
+      </div>
+      <div class="card-info-area">
+        <%= link_to "SEE FUNDING SOURCES", organization_path(id: organization.id), :class => "mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent", data: {no_turbolink: true} %>
+      </div>
+    </div>
+  <% end %>
+</div>

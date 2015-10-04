@@ -1,3 +1,41 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#welcome {
+  &> h1 {
+    text-align: center;
+  }
+
+  &> p {
+    text-align: center;
+    font-size: 6.5vw;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: $medium-gray;
+  }
+
+  &> form {
+    margin-top: 2rem;
+    text-align: center;
+
+    &> label {
+      font-size: 1.5rem;
+    }
+
+    &> input#postal_code[type="text"] {
+      width: 80%;
+      padding: 1.5rem;
+      background-color: #DEDADA;
+      text-align: center;
+      height: 4rem;
+    }
+
+    &> input {
+      margin-top: 1rem;
+      width: 90%;
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+      font-size: 5.5vw;
+    }
+  }
+
+
+
+}
