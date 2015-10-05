@@ -1,6 +1,6 @@
 namespace :deploy do
   desc "Populates the db of a new server with data"
-  task :populate_db do
+  task :populate_db => :environment do
     puts "Starting task..."
     Rake::Task['ministries:import'].invoke
     Rake::Task['organizations:import'].invoke
