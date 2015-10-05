@@ -5,6 +5,7 @@ namespace :deploy do
     Rake::Task['ministries:import'].invoke
     Rake::Task['organizations:import'].invoke
     Rake::Task['transfer_payments:import'].invoke
+    Rake::Task['mpp:import_all'].invoke
     Rake::Task['organization:get_location_data'].invoke
     Rake::Task['organizations:find_postal_code'].invoke
     Rake::Task['organizations:import_riding_data'].invoke
@@ -12,7 +13,6 @@ namespace :deploy do
     Rake::Task['ridings:get_url_safe_name'].invoke
     Rake::Task['organizations:create_riding_associations'].invoke
     Rake::Task['organizations:assign_funding'].invoke
-    Rake::Task['mpp:import_all'].invoke
     puts "Task complete."
   end
 end
