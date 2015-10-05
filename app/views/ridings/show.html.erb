@@ -23,22 +23,22 @@
       <h6><%= @mpp.full_name %></h6>
       <p>MEMBER OF PROVINCIAL PARLIAMENT</p>
     </div>
-    <div id="funding-info">
-      <i class="material-icons">local_atm</i>
-      <h6><%= number_to_currency(@riding.total_funding) %></h6>
-      <p>TOTAL FUNDING FOR ORGANIZATIONS</p>
-      <%= link_to riding_organizations_path(id: @riding.id), data: {no_turbolink: true} do %>
-        <i class="material-icons navigate-right">navigate_next</i>
-      <% end %>
-    </div>
-    <div id="organizations-info">
-      <i class="material-icons">public</i>
-      <h6><%= @total_organizations %> Organizations</h6>
-      <p>TOTAL NUMBER OF ORGANIZATIONS</p>
-      <%= link_to riding_organizations_path(id: @riding.id), data: {no_turbolink: true} do %>
-        <i class="material-icons navigate-right">navigate_next</i>
-      <% end %>
-    </div>
+    <%= link_to riding_organizations_path(id: @riding.id), data: {no_turbolink: true} do %>
+      <div id="funding-info">
+        <i class="material-icons">local_atm</i>
+        <h6><%= number_to_currency(@riding.total_funding) %></h6>
+        <p>TOTAL FUNDING FOR ORGANIZATIONS</p>
+          <i class="material-icons navigate-right">navigate_next</i>
+      </div>
+    <% end %>
+    <%= link_to riding_organizations_path(id: @riding.id), data: {no_turbolink: true} do %>
+      <div id="organizations-info">
+        <i class="material-icons">public</i>
+        <h6><%= @total_organizations %> Organizations</h6>
+        <p>TOTAL NUMBER OF ORGANIZATIONS</p>
+          <i class="material-icons navigate-right">navigate_next</i>
+      </div>
+    <% end %>
   </div>
 
 </div>

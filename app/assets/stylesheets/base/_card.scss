@@ -56,8 +56,9 @@
     padding: ($base-spacing / 3) ($base-spacing / 2);
     position: relative;
 
-    &> i.material-icons {
+    &> a, i.material-icons {
       vertical-align: middle;
+      color: black;
     }
 
     &> h6 {
@@ -72,9 +73,7 @@
     }
 
     &> a, i.navigate-right {
-      position: absolute;
-      right: 0;
-      top: 1rem;
+      vertical-align: middle;
     }
   }
 
