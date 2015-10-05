@@ -7,10 +7,26 @@ class RidingsController < ApplicationController
     @riding = Riding.find(params[:id])
     @total_organizations = @riding.organizations.count
     @mpp = @riding.member_of_provincial_parliament
+    @previous = previous_riding
+    @next = next_riding
+  end
 
-    # page nav variables
-    @previous = Riding.where("id < ?", params[:id]).order(:id).first
-    @next = Riding.where("id > ?", params[:id]).order(:id).first
+  def previous_riding
+    @ridings = Riding.order("name")
+    @previous = @ridings[@ridings.find_index(
+      Riding.find(params[:id])) - 1
+    ]
+  end
+
+  def next_riding
+    @ridings = Riding.order("name")
+    unless @ridings[@ridings.find_index(Riding.find(params[:id])) + 1].nil?
+      @next = @ridings[@ridings.find_index(
+        Riding.find(params[:id])) + 1
+      ]
+    else
+      @next = @ridings.first
+    end
   end
 
   def organizations
