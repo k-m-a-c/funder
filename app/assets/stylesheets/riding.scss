@@ -58,9 +58,14 @@
     margin: 1.5rem;
     background-color: white;
     box-shadow: 0 0 1px #BBB;
+    position: relative;
 
     &> img {
       vertical-align: middle;
+      border-radius: 50%;
+      width: 3.25rem;
+      height: 3.25rem;
+      object-fit: cover;
     }
 
     &> i {

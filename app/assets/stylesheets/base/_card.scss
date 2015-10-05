@@ -54,6 +54,28 @@
     font-weight: bold;
     line-height: 1.5em;
     padding: ($base-spacing / 3) ($base-spacing / 2);
+    position: relative;
+
+    &> i.material-icons {
+      vertical-align: middle;
+    }
+
+    &> h6 {
+      color: black;
+      font-size: 5.75vw;
+      line-height: 2.0rem;
+      vertical-align: middle;
+      margin: 0 0 0 0.75rem;
+      padding: 0;
+      display: inline-block;
+      max-width: 83%;
+    }
+
+    &> a, i.navigate-right {
+      position: absolute;
+      right: 0;
+      top: 1rem;
+    }
   }
 
   .card-copy {

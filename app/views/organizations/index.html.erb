@@ -5,9 +5,11 @@
   <% @organizations.each do |org| %>
     <div class="card">
       <div class="card-header">
-      <%= link_to organization_path(org.id), data: {no_turbolink: true} do %>
-        <%= org.name %>
-      <% end %>
+        <i class="material-icons">business</i>
+        <h6><%= org.name.downcase.split.map(&:capitalize).join(' ') %></h6>
+        <%= link_to organization_path(org.id), data: {no_turbolink: true} do %>
+          <i class="material-icons navigate-right">navigate_next</i>
+        <% end %>
       </div>
       <div class="card-copy">
         <p><strong>Funding:</strong> <%= number_to_currency(org.funding) %></p>
