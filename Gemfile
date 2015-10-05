@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.2.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record
@@ -29,7 +29,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma'
 
 # Enable static asset serving and logging on Heroku
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
+
 
 # Use Roo for parsing imported spreadsheets
 gem 'roo', '~> 2.1.0'

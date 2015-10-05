@@ -1,5 +1,5 @@
 namespace :ridings do
-  desc "Remove non-url-safe characters from all "
+  desc "Remove non-url-safe characters from all riding names"
   task :get_url_safe_name => :environment do
     puts "Starting task..."
     Riding.all.each do |riding|
