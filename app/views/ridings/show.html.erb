@@ -1,4 +1,4 @@
-<% content_for :title, truncate(@riding.name, length: 22) %>
+<% content_for :title, truncate(@riding.name, length: 20) %>
 <div class="container">
 
   <div id="riding-shape-area">
@@ -8,7 +8,9 @@
       <% end %>
     </div>
 
-    <div id="shape"></div>
+    <div id="shape">
+      <%= image_tag @mpp.profile_image %>
+    </div>
 
     <div id="right-arrow">
       <%= link_to next_riding, :class => "mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent", data: {no_turbolink: true} do %>
@@ -19,7 +21,6 @@
 
   <div id="riding-summary-card">
     <div id="mpp-info">
-      <%= image_tag @mpp.profile_image %>
       <h6><%= @mpp.full_name %></h6>
       <p>MEMBER OF PROVINCIAL PARLIAMENT</p>
     </div>

@@ -11,14 +11,17 @@
 
   &> #shape {
     @include clearfix;
-    display: block;
-    position: absolute;
-    left: 25%;
-    border-radius: 50%;
-    width: 10rem;
-    height: 10rem;
-    margin-bottom: 1rem;
-    background-color: black;
+
+    &> img {
+      display: block;
+      position: absolute;
+      left: 25%;
+      border-radius: 50%;
+      width: 10rem;
+      height: 10rem;
+      margin-bottom: 1rem;
+      object-fit: cover;
+    }
   }
 
   &> #right-arrow {
