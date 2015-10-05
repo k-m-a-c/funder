@@ -49,5 +49,4 @@ class Riding < ActiveRecord::Base
     end
     amounts.inject(:+)
   end
-
 end

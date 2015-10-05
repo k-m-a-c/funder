@@ -25,6 +25,12 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Use Puma as the app server
+gem 'puma'
+
+# Enable static asset serving and logging on Heroku
+gem 'rails_12factor'
+
 # Use Roo for parsing imported spreadsheets
 gem 'roo', '~> 2.1.0'
 
