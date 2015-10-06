@@ -2,14 +2,14 @@
   margin: 1.5rem 1.5rem 13rem 1.5rem;
   position: relative;
 
-  @include media($desktop) {
-    max-width: 50%;
-    margin: 2rem auto 13rem auto;
-  }
-
   @include media($tablet) {
     max-width: 50%;
     margin: 1.5rem auto 12rem auto;
+  }
+
+  @include media($desktop) {
+    max-width: 50%;
+    margin: 2rem auto 13rem auto;
   }
 
   &> #left-arrow {
@@ -39,12 +39,12 @@
       margin-bottom: 1rem;
       object-fit: cover;
 
-      @include media($desktop) {
-        left: 33%;
-      }
-
       @include media($tablet) {
         left: 30%;
+      }
+
+      @include media($desktop) {
+        left: 33%;
       }
     }
   }
@@ -152,12 +152,12 @@
       display: inline-block;
       max-width: 83%;
 
-      @include media($desktop) {
-        font-size: 1.75vw;
-      }
-
       @include media($tablet) {
         font-size: 2.75vw;
+      }
+
+      @include media($desktop) {
+        font-size: 1.75vw;
       }
     }
 
@@ -198,12 +198,12 @@
       display: inline-block;
       max-width: 83%;
 
-      @include media($desktop) {
-        font-size: 1.75vw;
-      }
-
       @include media($tablet) {
         font-size: 2.75vw;
+      }
+
+      @include media($desktop) {
+        font-size: 1.75vw;
       }
     }
 

@@ -22,6 +22,16 @@
   margin: 0 $card-margin $base-spacing $card-margin;
   position: relative;
 
+  @include media($tablet) {
+    margin: 1.5rem auto 1.5rem auto;
+    max-width: 75%;
+  }
+
+  @include media($desktop) {
+    margin: 1.5rem auto 1.5rem auto;
+    max-width: 75%;
+  }
+
   .card-info-area {
     padding: 0.75rem;
     margin: 1.5rem;
@@ -41,6 +51,16 @@
       padding: 0;
       display: inline-block;
       max-width: 83%;
+
+      @include media($tablet) {
+        font-size: 2.25vw;
+        line-height: 2.25rem;
+      }
+
+      @include media($desktop) {
+        font-size: 2.25vw;
+        line-height: 2.25rem;
+      }
     }
 
     &> p {
@@ -64,6 +84,10 @@
     text-align: center;
 
     &> canvas#fundingGraph {
+
+      @include media($tablet) {
+        margin-top: 1rem;
+      }
     }
 
     &> p {
@@ -79,6 +103,14 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     text-align: left;
+
+    @include media($tablet) {
+      margin-top: 2rem;
+    }
+
+    @include media($desktop) {
+      margin-top: 2rem;
+    }
 
     &> .circle {
       display: block;
@@ -106,6 +138,15 @@
         color: black;
         font-size: 5.75vw;
         line-height: 2.0rem;
+
+        @include media($tablet) {
+          font-size: 3.75vw;
+        }
+
+        @include media($desktop) {
+          font-size: 2.75vw;
+          display: block;
+        }
       }
 
       &> p {
@@ -116,6 +157,14 @@
         max-width: 70%;
         margin-bottom: 0;
         margin-right: 2rem;
+
+        @include media($tablet) {
+          font-size: 2vw;
+        }
+
+        @include media($desktop) {
+          font-size: 1vw;
+        }
       }
     }
 
