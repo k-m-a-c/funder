@@ -7,6 +7,11 @@
     margin: 2rem auto 13rem auto;
   }
 
+  @include media($tablet) {
+    max-width: 50%;
+    margin: 1.5rem auto 12rem auto;
+  }
+
   &> #left-arrow {
     position: absolute;
     left: 0;
@@ -36,6 +41,10 @@
 
       @include media($desktop) {
         left: 33%;
+      }
+
+      @include media($tablet) {
+        left: 30%;
       }
     }
   }
@@ -107,6 +116,10 @@
       @include media($desktop) {
         font-size: 2.75vw;
       }
+
+      @include media($tablet) {
+        font-size: 3.75vw;
+      }
     }
 
     &> p {
@@ -141,6 +154,10 @@
 
       @include media($desktop) {
         font-size: 1.75vw;
+      }
+
+      @include media($tablet) {
+        font-size: 2.75vw;
       }
     }
 
@@ -183,6 +200,10 @@
 
       @include media($desktop) {
         font-size: 1.75vw;
+      }
+
+      @include media($tablet) {
+        font-size: 2.75vw;
       }
     }
 
