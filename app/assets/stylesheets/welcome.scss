@@ -1,4 +1,6 @@
 #welcome {
+  text-align: center;
+
   &> h1 {
     text-align: center;
   }
@@ -10,10 +12,18 @@
     margin-right: 1rem;
     color: $medium-gray;
     line-height: 1.925rem;
+
+    @include media($desktop) {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      max-width: 55%;
+      text-align: center;
+      display: inline-block;
+    }
   }
 
   &> form {
-    margin-top: 2rem;
+    margin-top: 1rem;
     text-align: center;
 
     &> label {
@@ -26,6 +36,14 @@
       background-color: #DEDADA;
       text-align: center;
       height: 4rem;
+
+      @include media($desktop) {
+        margin-top: 0.5rem;
+        width: 40%;
+        padding: 0.5rem;
+        text-align: center;
+        height: 2rem;
+      }
     }
 
     &> input {
@@ -34,6 +52,15 @@
       padding-top: 2rem;
       padding-bottom: 3rem;
       font-size: 5.5vw;
+
+      @include media($desktop) {
+        width: 20%;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 1rem;
+        display: block;
+        margin: auto;
+      }
     }
   }
 
