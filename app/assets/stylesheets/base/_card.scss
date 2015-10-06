@@ -70,11 +70,25 @@
       padding: 0;
       display: inline-block;
       max-width: 83%;
+
+      @include media($tablet) {
+        font-size: 2.75vw;
+        max-width: 80%;
+      }
+
+      @include media($desktop) {
+        font-size: 1.75vw;
+        max-width: 70%;
+      }
     }
 
     &> a, i.navigate-right {
       vertical-align: middle;
     }
+  }
+
+  .padder {
+
   }
 
   .card-copy {
