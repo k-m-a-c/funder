@@ -113,12 +113,12 @@
       display: inline-block;
       max-width: 83%;
 
-      @include media($desktop) {
-        font-size: 2.75vw;
-      }
-
       @include media($tablet) {
         font-size: 3.75vw;
+      }
+
+      @include media($desktop) {
+        font-size: 2.75vw;
       }
     }
 
