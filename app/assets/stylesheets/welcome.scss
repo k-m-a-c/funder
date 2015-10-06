@@ -20,6 +20,14 @@
       text-align: center;
       display: inline-block;
     }
+
+    @include media($tablet) {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      max-width: 60%;
+      text-align: center;
+      display: inline-block;
+    }
   }
 
   &> form {
@@ -44,6 +52,15 @@
         text-align: center;
         height: 2rem;
       }
+
+      @include media($tablet) {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        width: 70%;
+        padding: 1rem;
+        text-align: center;
+        height: 2rem;
+      }
     }
 
     &> input {
@@ -58,6 +75,15 @@
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         font-size: 1rem;
+        display: block;
+        margin: auto;
+      }
+
+      @include media($tablet) {
+        width: 30%;
+        padding-top: 1rem;
+        padding-bottom: 2.75rem;
+        font-size: 1.5rem;
         display: block;
         margin: auto;
       }
