@@ -8,6 +8,11 @@ body {
     div.container {
       @include outer-container;
       padding-top: 0.5rem;
+
+      .spinner {
+        margin: auto;
+        display: block;
+      }
     }
   }
 }

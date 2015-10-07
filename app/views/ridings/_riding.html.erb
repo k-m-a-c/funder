@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-image">
+    <%= link_to riding_path(riding.id), data: {no_turbolink: true} do %>
+      <%= image_tag riding.photo_url %>
+    <% end %>
+  </div>
+  <div class="card-header">
+    <%= riding.name %>
+  </div>
+  <div class="card-copy">
+    <p><strong>Population:</strong> 125,000 | <strong>MPP:</strong> <%= riding.member_of_provincial_parliament.full_name %></p>
+  </div>
+</div>

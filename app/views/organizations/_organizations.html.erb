@@ -1,0 +1,14 @@
+<% @organizations.each do |org| %>
+  <div class="card">
+    <%= link_to organization_path(org.id), data: {no_turbolink: true} do %>
+      <div class="card-header">
+        <i class="material-icons">business</i>
+        <h6><%= org.name.downcase.split.map(&:capitalize).join(' ') %></h6>
+      </div>
+    <% end %>
+    <div class="padder"></div>
+    <div class="card-copy">
+      <p><strong>Funding:</strong> <%= number_to_currency(org.funding) %></p>
+    </div>
+  </div>
+<% end %>
