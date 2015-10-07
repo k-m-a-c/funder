@@ -80,9 +80,17 @@
   cursor: pointer;
   margin: 0 $card-margin $base-spacing $card-margin;
   position: relative;
-  max-width: 60%;
   margin-left: auto;
   margin-right: auto;
+  max-width: 90%;
+
+  @include media($tablet) {
+    max-width: 60%;
+  }
+
+  @include media($desktop) {
+    max-width: 80%;
+  }
 
   #mpp-info {
     padding: 0.75rem;
