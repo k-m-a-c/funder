@@ -1,9 +1,8 @@
 body {
   margin: 0;
 
-  main {
-    // padding-top: 0.5rem;
-    // padding-bottom: 0.5rem;
+  main.mdl-layout__content {
+    margin-top: 1rem;
 
     div.container {
       @include outer-container;
