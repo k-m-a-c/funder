@@ -1,0 +1,9 @@
+// Append new data
+$("<%=j render(:partial => 'riding', :object => @ridings) %>").appendTo($(".cards"));
+
+// Update pagination link
+<% if @ridings.last_page? %>
+  $('.pagination').html("That's all, folks!");
+<% else %>
+  $('.pagination').html("<%=j link_to_next_page(@ridings, 'Next Page', :remote => true) %>");
+<% end %>

@@ -1,10 +1,9 @@
 <% content_for :title, "Ridings" %>
 <div class="container">
-  <%= paginate @ridings %>
   <div class="cards">
-  <% @ridings.each do |riding| %>
-    <%= render partial: 'riding', locals: {riding: riding} %>
-  <% end %>
-  <%= paginate @ridings %>
+    <%= render partial: 'riding', locals: {ridings: @ridings} %>
   </div>
+  <p class="pagination">
+    <%= link_to_next_page(@ridings, 'Next Page', :remote => true) %>
+  </p>
 </div>
