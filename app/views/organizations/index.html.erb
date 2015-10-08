@@ -1,8 +1,10 @@
 <% content_for :title, "Organizations" %>
 <div class="container">
-  <!-- <div class="mdl-spinner mdl-js-spinner is-active spinner"></div> -->
   <div class="cards">
-    <%= render partial: 'organizations', locals: {organizations: @organizations} %>
-    <%= paginate @organizations %>
+    <%= render partial: 'organization', locals: {organizations: @organizations} %>
   </div>
+  <p class="pagination">
+    <%= link_to_next_page(@organizations, 'Next Page', :remote => true) %>
+  </p>
+  <div class="mdl-spinner mdl-js-spinner spinner"></div>
 </div>

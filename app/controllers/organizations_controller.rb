@@ -10,6 +10,8 @@ class OrganizationsController < ApplicationController
           render 'index'
         end
       end
+
+      format.js { render 'index' }
     end
   end
 
