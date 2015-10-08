@@ -41,9 +41,6 @@ gem 'mechanize'
 # Use Nokogiri to parse a target site's markup
 gem 'nokogiri'
 
-# Use Fibonaccia to access PHI
-gem 'fibonaccia'
-
 # Use HTTParty for network requests
 gem 'httparty'
 
