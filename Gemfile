@@ -31,7 +31,6 @@ gem 'puma'
 # Enable static asset serving and logging on Heroku
 gem 'rails_12factor', group: :production
 
-
 # Use Roo for parsing imported spreadsheets
 gem 'roo', '~> 2.1.0'
 
@@ -49,6 +48,10 @@ gem 'figaro'
 
 # Use Kaminari for pagination
 gem 'kaminari'
+
+# Use Textacular and Scenic for search
+gem 'textacular'
+gem 'scenic'
 
 # UI tools
 gem 'autoprefixer-rails'
