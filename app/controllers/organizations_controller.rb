@@ -20,6 +20,11 @@ class OrganizationsController < ApplicationController
     @payments = @organization.transfer_payments
   end
 
+  def search
+    @results = Organization.fuzzy_search(params["fixed-header-drawer-exp"])
+    render json: @results
+  end
+
   def funding_data
     @organization = Organization.find(params[:id])
     @funding_data = @organization.funding_by_ministry

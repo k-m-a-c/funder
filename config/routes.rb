@@ -10,4 +10,10 @@ Rails.application.routes.draw do
     as: 'riding_organizations'
   post '/ridings/my_riding', to: 'ridings#get_my_riding',
     as: 'get_my_riding'
+
+  # search paths
+  get '/search/organizations', to: 'organizations#search',
+    as: 'org_search'
+  get '/search/ridings', to: 'ridings#search',
+    as: 'riding_search'
 end

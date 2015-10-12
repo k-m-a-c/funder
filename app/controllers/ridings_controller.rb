@@ -23,6 +23,7 @@ class RidingsController < ApplicationController
     @next = next_riding
   end
 
+  # Nav action 'previous riding'
   def previous_riding
     @ridings = Riding.order("name")
     @previous = @ridings[@ridings.find_index(
@@ -30,6 +31,7 @@ class RidingsController < ApplicationController
     ]
   end
 
+  # Nav action 'next riding'
   def next_riding
     @ridings = Riding.order("name")
     unless @ridings[@ridings.find_index(Riding.find(params[:id])) + 1].nil?
@@ -39,6 +41,11 @@ class RidingsController < ApplicationController
     else
       @next = @ridings.first
     end
+  end
+
+  def search
+    @results = Riding.fuzzy_search(params["fixed-header-drawer-exp"])
+    render json: @results
   end
 
   def organizations
