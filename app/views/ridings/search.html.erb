@@ -1,6 +1,6 @@
 <% content_for :title, "Riding Search" %>
 <% @results.each do |riding| %>
-  <div class="card">
+  <div class="search-result-card">
     <div class="card-image">
       <%= link_to riding_path(riding.id), data: {no_turbolink: true} do %>
         <%= image_tag riding.photo_url %>

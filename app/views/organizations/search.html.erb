@@ -1,6 +1,6 @@
 <% content_for :title, "Organization Search" %>
 <% @results.each do |org| %>
-  <div class="card">
+  <div class="search-result-card">
     <%= link_to organization_path(org.id), data: {no_turbolink: true} do %>
       <div class="card-header">
         <i class="material-icons">business</i>
