@@ -20,11 +20,20 @@ module ApplicationHelper
 
 
   def search_routing
-    if params[:controller] === "organizations"
+    if params[:controller] === "organizations" &&
+      params[:action] === "index"
+
       org_search_path
-    elsif params[:controller] === "ridings"
+
+    elsif params[:controller] === "ridings" &&
+      params[:action] === "index"
+
       riding_search_path
+
+    elsif params[:controller] === "ridings" &&
+      params[:action] === "organizations"
+
+      org_search_path
     end
   end
-
 end
