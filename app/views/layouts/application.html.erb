@@ -25,14 +25,16 @@
         <%= link_to "Ridings", ridings_path, :class => "mdl-navigation__link", data: {no_turbolink: true} %>
         <%= link_to "Organizations", organizations_path, :class => "mdl-navigation__link", data: {no_turbolink: true} %>
       </nav>
-
-      <%= form_tag search_path, class: "mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right", method: :get do %>
-        <%= label_tag "fixed-header-drawer-exp", class: "mdl-button mdl-js-button mdl-button--icon" do %>
-          <i class="material-icons">search</i>
+      <% unless show_search? %>
+      <% else %>
+        <%= form_tag search_routing, class: "mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right", method: :get do %>
+          <%= label_tag "fixed-header-drawer-exp", class: "mdl-button mdl-js-button mdl-button--icon" do %>
+            <i class="material-icons">search</i>
+          <% end %>
+          <div class="mdl-textfield__expandable-holder">
+            <%= text_field_tag "fixed-header-drawer-exp", nil, class: "mdl-textfield__input" %>
+          </div>
         <% end %>
-        <div class="mdl-textfield__expandable-holder">
-          <%= text_field_tag "fixed-header-drawer-exp", nil, class: "mdl-textfield__input" %>
-        </div>
       <% end %>
     </div>
   </header>

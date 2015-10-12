@@ -25,6 +25,7 @@ class OrganizationsController < ApplicationController
     render json: @results
   end
 
+  # This endpoint is queried by the "org_funding_graph"
   def funding_data
     @organization = Organization.find(params[:id])
     @funding_data = @organization.funding_by_ministry
