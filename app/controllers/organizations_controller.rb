@@ -22,7 +22,6 @@ class OrganizationsController < ApplicationController
 
   def search
     @results = Organization.fuzzy_search(params["fixed-header-drawer-exp"])
-    render json: @results
   end
 
   # This endpoint is queried by the "org_funding_graph"

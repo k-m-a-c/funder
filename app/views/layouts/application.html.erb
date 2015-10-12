@@ -25,8 +25,14 @@
         <%= link_to "Ridings", ridings_path, :class => "mdl-navigation__link", data: {no_turbolink: true} %>
         <%= link_to "Organizations", organizations_path, :class => "mdl-navigation__link", data: {no_turbolink: true} %>
       </nav>
+
+      <!-- SEARCH BAR -->
+      <!-- show_search? is an application helper written to
+      show the search bar only on certain pages -->
       <% unless show_search? %>
       <% else %>
+        <!-- search_routing is an application helper written
+        to select which search endpoint to query -->
         <%= form_tag search_routing, class: "mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right", method: :get do %>
           <%= label_tag "fixed-header-drawer-exp", class: "mdl-button mdl-js-button mdl-button--icon" do %>
             <i class="material-icons">search</i>
@@ -36,6 +42,7 @@
           </div>
         <% end %>
       <% end %>
+      <!-- /SEARCH BAR -->
     </div>
   </header>
 

@@ -15,6 +15,16 @@ module ApplicationHelper
       params[:action] === "organizations"
 
       true
+
+    elsif params[:controller] === "ridings" &&
+      params[:action] === "search"
+
+      true
+
+    elsif params[:controller] === "organizations" &&
+      params[:action] === "search"
+
+      true
     end
   end
 
@@ -32,6 +42,16 @@ module ApplicationHelper
 
     elsif params[:controller] === "ridings" &&
       params[:action] === "organizations"
+
+      org_search_path
+
+    elsif params[:controller] === "ridings" &&
+      params[:action] === "search"
+
+      riding_search_path
+
+    elsif params[:controller] === "organizations" &&
+      params[:action] === "search"
 
       org_search_path
     end

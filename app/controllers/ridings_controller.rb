@@ -45,7 +45,6 @@ class RidingsController < ApplicationController
 
   def search
     @results = Riding.fuzzy_search(params["fixed-header-drawer-exp"])
-    render json: @results
   end
 
   def organizations
@@ -53,6 +52,7 @@ class RidingsController < ApplicationController
     @organizations = @riding.organizations
   end
 
+  # Used on welcome#index to obtain a user's riding
   def get_my_riding
     postal_code = params[:postal_code]
     id = Riding.get_user_riding(postal_code)
