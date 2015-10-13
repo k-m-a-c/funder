@@ -58,4 +58,20 @@ class RidingsController < ApplicationController
     id = Riding.get_user_riding(postal_code)
     redirect_to riding_path(id)
   end
+
+  def sort_most_to_least_funding
+    @ridings = Riding.order(funding: :desc).page(params[:page]).per(20)
+
+    respond_to do |format|
+      format.html do
+        if request.xhr?
+          render @ridings
+        else
+          render 'index'
+        end
+      end
+
+      format.js { render 'index' }
+    end
+  end
 end

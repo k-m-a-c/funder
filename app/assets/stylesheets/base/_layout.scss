@@ -14,4 +14,33 @@ body {
       }
     }
   }
+
+  .mdl-layout-title {
+    font-size: 18px;
+  }
+
+  #sorting {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+
+    button {
+      position: relative;
+    }
+
+    p {
+      color: $medium-gray;
+      vertical-align: middle;
+      float: left;
+      padding-right: 0.5rem;
+      margin-bottom: -0.25rem;
+    }
+
+    i {
+      color: $medium-gray;
+      vertical-align: middle;
+      float: right;
+    }
+  }
 }

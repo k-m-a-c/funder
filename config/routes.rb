@@ -16,4 +16,11 @@ Rails.application.routes.draw do
     as: 'org_search'
   get '/search/ridings', to: 'ridings#search',
     as: 'riding_search'
+
+  # sorting paths
+  get '/sort/organizations/most_to_least_funding', to: 'organizations#sort_most_to_least_funding',
+    as: 'sort_orgs_most_to_least_funding'
+
+  get '/sort/ridings/most_to_least_funding', to: 'ridings#sort_most_to_least_funding',
+    as: 'sort_ridings_most_to_least_funding'
 end

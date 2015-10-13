@@ -1,5 +1,11 @@
 <% content_for :title, "Ridings" %>
 <div class="container">
+  <div id="sorting">
+    <%= button_to sort_ridings_most_to_least_funding_path, method: :get, class: "mdl-button mdl-js-button mdl-js-ripple-effect", id: "sort" do %>
+      <p>Sort by most to least funding</p>
+      <i id="sort-most-to-least" class="material-icons">filter_list</i>
+    <% end %>
+  </div>
   <div class="cards">
     <%= render partial: 'riding', locals: {ridings: @ridings} %>
   </div>

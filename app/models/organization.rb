@@ -78,4 +78,10 @@ class Organization < ActiveRecord::Base
     }
     totals
   end
+
+  def self.sort_most_to_least_funding
+    Organization.order(funding: :desc).reject{|org|
+      org.funding.nil?
+    }
+  end
 end

@@ -2,6 +2,16 @@ $(document).on('page:load ready', function() {
 
   var nextPageUrl;
 
+  var sortMostToLeast = $('button#sort');
+
+  sortMostToLeast.on('click', function() {
+    $.ajax({
+      url: '/sort/organizations/most_to_least_funding',
+      type: 'GET',
+      dataType: 'script'
+    });
+  });
+
   $('.mdl-layout__content').on('scroll', function(e) {
     console.log("inside the scroll event");
 

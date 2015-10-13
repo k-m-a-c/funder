@@ -49,4 +49,10 @@ class Riding < ActiveRecord::Base
     end
     amounts.inject(:+)
   end
+
+  def self.sort_most_to_least_funding
+    Riding.order(funding: :desc).reject{|riding|
+      riding.funding.nil?
+    }
+  end
 end
