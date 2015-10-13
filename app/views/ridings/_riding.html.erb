@@ -9,7 +9,7 @@
       <%= riding.name %>
     </div>
     <div class="card-copy">
-      <p><strong>Population:</strong> 125,000 | <strong>MPP:</strong> <%= riding.member_of_provincial_parliament.full_name %></p>
+      <p><strong>Funding:</strong> <%= number_to_currency(riding.funding) %> | <strong>MPP:</strong> <%= riding.member_of_provincial_parliament.full_name %></p>
     </div>
   </div>
 <% end %>
