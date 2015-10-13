@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012230153) do
+ActiveRecord::Schema.define(version: 20151013050455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,22 +79,4 @@ ActiveRecord::Schema.define(version: 20151012230153) do
   add_foreign_key "organizations", "ridings"
   add_foreign_key "transfer_payments", "ministries"
   add_foreign_key "transfer_payments", "organizations"
-        create_view :searches, sql_definition:<<-SQL
-          SELECT organizations.id AS searchable_id,
-    'Organization'::text AS searchable_type,
-    organizations.name AS term
-   FROM organizations
-UNION
- SELECT ridings.id AS searchable_id,
-    'Riding'::text AS searchable_type,
-    ridings.name AS term
-   FROM ridings
-UNION
- SELECT ridings.id AS searchable_id,
-    'MemberOfProvincialParliament'::text AS searchable_type,
-    member_of_provincial_parliaments.full_name AS term
-   FROM (ridings
-     JOIN member_of_provincial_parliaments ON ((ridings.id = member_of_provincial_parliaments.riding_id)));
-        SQL
-
 end
