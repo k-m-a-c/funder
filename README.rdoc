@@ -1,28 +1,37 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Summary
 
-Things you may want to cover:
+Funder is a small, responsive web application designed, primarily, to let Ontario Members of Provincial Parliament see what organizations in a given provincial riding are receiving funding from the Ontario government, and to provide some details around the amounts and sources of these funds.
 
-* Ruby version
+The app itself is written predominately in Ruby 2.2.2/the latest version of jQuery, and is built atop Rails 4.2.4 with a PostgreSQL database.
 
-* System dependencies
+Currently, the app is hosted on Heroku, which was chosen to minimize time spent on environment set up and operations during its tight development timeline, and is accessible at `http://csi-funder.herokuapp.com/`.
 
-* Configuration
+The application's database contains a static dataset composed of 5 lists of data associated in various ways:
 
-* Database creation
+*Members of Provincial Parliament:* (2015) Sourced from the Open North API at https://represent.opennorth.ca/api/
 
-* Database initialization
+*Ministries:* Sourced from an excel sheet provided by CSI Digital `/ministries.xlsx`
 
-* How to run the test suite
+*Organizations:* Sourced from an excel sheet provided by CSI Digital `/organizations.xlsx`
 
-* Services (job queues, cache servers, search engines, etc.)
+*Ridings:* Composed via use of a web scraper that manually queried Elections Canada data based upon addresses imported from the Google Places API.
 
-* Deployment instructions
+*Transfer Payments:* Sourced from an excel sheet provided by CSI Digital `/transfer_payments.xlsx`
 
-* ...
+## Deployment
 
+1. Should you wish to deploy the application somewhere other than Heroku, you will first need to configure a server, running your chosen OS, with Funder's dependencies, which mostly boil down to installing specific versions of Ruby, Bundler, Rails, and PostgreSQL.
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+For a comprehensive guide to setting up Ruby on Rails on Ubuntu, I recommend [this DigitalOcean tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-14-04).
+
+For a similarly comprehensive guide to installing postgreSQL on Ubuntu, I recommend [this other tutorial on DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-14-04) (they write a lot of great tutorials).
+
+2. Populate (a.k.a. "restore") the postgreSQL database from a the project's SQL dump file [funder.dump](https://dl.dropboxusercontent.com/u/30819827/funder.dump).
+
+For a comprehensive guide to restoring a postgreSQL database from a SQL dump, I recommend [this tutorial](http://www.thegeekstuff.com/2009/01/how-to-backup-and-restore-postgres-database-using-pg_dump-and-psql/).
+
+3. Deploy the application.
+
+For a comprehensive guide to deploying a Rails application, I recommend [this DigitalOcean tutorial](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-rails-app-with-git-hooks-on-ubuntu-14-04).
