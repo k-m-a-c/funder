@@ -1,6 +1,6 @@
 == README
 
-## Summary
+##Summary
 
 Funder is a small, responsive web application designed, primarily, to let Ontario Members of Provincial Parliament see what organizations in a given provincial riding are receiving funding from the Ontario government, and to provide some details around the amounts and sources of these funds.
 
@@ -20,7 +20,7 @@ The application's database contains a static dataset composed of 5 lists of data
 
 *Transfer Payments:* Sourced from an excel sheet provided by CSI Digital `/transfer_payments.xlsx`
 
-## Deployment
+##Deployment
 
 1. Should you wish to deploy the application somewhere other than Heroku, you will first need to configure a server, running your chosen OS, with Funder's dependencies, which mostly boil down to installing specific versions of Ruby, Bundler, Rails, and PostgreSQL.
 
